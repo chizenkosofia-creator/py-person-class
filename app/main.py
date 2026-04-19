@@ -9,7 +9,8 @@ class Person:
 
 def create_person_list(people: list) -> list:
     Person.people = {}
-    res_list = [Person(person.get("name"), person.get("age")) for person in people]
+    res_list = [Person(person.get("name"),
+                       person.get("age")) for person in people]
     for person in people:
         human = Person.people[person.get("name")]
         wife_name = person.get("wife")
